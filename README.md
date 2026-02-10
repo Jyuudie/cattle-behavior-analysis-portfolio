@@ -45,7 +45,7 @@ The project successfully processed over **15,000 frames** of milking footage. Th
 
 ## 📜 Project Documentation
 * **[Slideshow Presentation (PDF)](Docs/Presentation_pdf.pdf):** A 15-slide visual summary of the project goals, methodology, and biological validation results.
-* **[Full Technical Report (PDF)](Docs/Final_Report.pdf):** A technical report detailing the methods, error analysis, and statistical validation.
+* **[Full Technical Report (PDF)](Docs/FINAL_REPORT.pdf):** A technical report detailing the methods, error analysis, and statistical validation.
 
 ## 📈 Performance & Results
 
