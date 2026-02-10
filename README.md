@@ -1,4 +1,4 @@
-# cattle-behavior-analysis-portfolio
+## Cattle-behavior-analysis-portfolio
 This repository contains the documentation, results, and presentation for my Capstone Project. The source code and dataset are currently private due to intellectual property agreements with the industry partner (Agriculture Victoria). Access to the codebase can be granted upon request.
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
