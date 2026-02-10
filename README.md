@@ -12,15 +12,15 @@
 ## 📌 Project Overview
 **Can we trust the data from methane sensors if we don't know where the cow's head is?**
 
-This project validates the accuracy of methane sniffer protocols using **Computer Vision**. By automating the tracking of cow head positions in milking parlors, we correlated behavioral data with sensor logs to biologically validate the standard sampling window.
+This project validates the accuracy of methane sniffer protocols using **Computer Vision**. By automating the tracking of cow head positions in milking parlors, we correlated behavioral data with sensor logs to validate the standard sampling window.
 
 Using **YOLOv8** and **RT-DETR**, the system tracks cattle under severe occlusion (infrastructure/feed bins) and uses unsupervised **K-Means clustering** to algorithmically determine feeding thresholds.
 
 ## 🚀 Key Features
 * **Amodal Detection:** Robust tracking of cattle heads under severe occlusion (feed bins/rails).
-* **Algorithmic Thresholding:** Replaced manual guessing with **K-Means Clustering ($k=2$)** to scientifically define "Feeding" vs "Non-Feeding" states.
+* **Algorithmic Thresholding:** Replaced manual guessing with **K-Means Clustering ($k=2$)** to define "Feeding" vs "Non-Feeding" states.
 * **Active Learning Pipeline:** Implemented an auto-labeling loop (Script A.10) to rapidly scale the dataset using model-assisted annotation.
-* **Biological Validation:** Confirmed that the herd's "Biphasic Feeding Pattern" aligns with the industry-standard **90s–410s sampling window**.
+* **Biological Validation:** Confirmed that the herd's feeding pattern aligns with Ellinbank **90s–410s sampling window**.
 
 ## 🏗️ System Architecture & Pipeline
 The project is structured into **12 modular scripts** that handle the full lifecycle from raw video ingestion to statistical validation.
@@ -28,7 +28,7 @@ The project is structured into **12 modular scripts** that handle the full lifec
 ### Phase 1: Data Preparation & Active Learning
 | ID | Script | Functionality |
 | :--- | :--- | :--- |
-| **A.9** | `extract_inference_frames.py` | **Data Ingestion:** Converts raw video footage into static image sequences (5fps) to prepare for the auto-labeling pipeline. |
+| **A.9** | `extract_inference_frames.py` | **Data Ingestion:** Converts raw video footage into static image sequences to prepare for the auto-labeling pipeline. |
 | **A.10** | `generate_cvat_preannotations.py` | **Active Learning:** Uses the trained model to predict bounding boxes on new frames, creating pre-annotated text files for rapid correction in CVAT. |
 | **A.1** | `sync_frames.py` | **Data Synchronization:** Iterates through CVAT exports, matches them to raw video frames, and extracts high-res image-text pairs for YOLO/COCO formatting. |
 
@@ -36,7 +36,7 @@ The project is structured into **12 modular scripts** that handle the full lifec
 | ID | Script | Functionality |
 | :--- | :--- | :--- |
 | **A.2** | `find_threshold.py` | **Spatial Calibration:** A GUI utility to manually identify the "Feeding Horizon" (pixel y-coordinate) of the feed rail for specific camera angles. |
-| **A.3** | `train_models.py` | **Training Loop:** Configures and initiates training for **YOLOv8** and **RT-DETR**, including custom augmentations (Mosaic, MixUp) and hyperparameter definitions. |
+| **A.3** | `train_models.py` | **Training Loop:** Configures and initiates training for **YOLOv8** and **RT-DETR**, including custom augmentations (e.g. Mosaic) and hyperparameter definitions. |
 
 ### Phase 3: Inference & Tracking
 | ID | Script | Functionality |
@@ -56,7 +56,7 @@ The project is structured into **12 modular scripts** that handle the full lifec
 ## 📊 Results at a Glance
 The project successfully processed over **15,000 frames** of milking footage. The analysis revealed a clear "W-shaped" feeding pattern, proving that the standard sampling window is statistically sufficient.
 
-![Validation Graph](Docs/Validation_graph.png)
+![Validation Graph](Docs/validation_graph.png)
 *(Figure: The "W-Shape" Feeding Pattern detected by the Computer Vision system, aligned with the methane sampling window.)*
 
 ## 📜 Project Documentation
@@ -71,7 +71,7 @@ The model achieved high precision even in low-light conditions. As seen in the C
 
 | Confusion Matrix |
 | :---: |
-| ![Confusion Matrix](Docs/conf.png) |
+| ![Confusion Matrix](Docs/Conf.png) |
 
 ### 2. Visual Validation
 Below is a sample of the model tracking a cow's head correctly despite severe occlusion from the feed bin and tubing.
@@ -85,5 +85,5 @@ This code was developed as part of a Master's Capstone project with **DEECA / Ag
 ### 📧 Contact & Access
 **Judy Thanh Uyen Nguyen**
 * **Institution:** DEECA / Agriculture Victoria Research & La Trobe University
-* **LinkedIn:** [Your LinkedIn Profile URL Here]
+* **LinkedIn:** [https://au.linkedin.com/in/judy-nguyen-2b7312144]
 * **Email:** [judy.n88@live.com.au]
