@@ -56,7 +56,7 @@ The project is structured into **12 modular scripts** that handle the full lifec
 ## 📊 Results at a Glance
 The project successfully processed over **15,000 frames** of milking footage. The analysis revealed a clear "W-shaped" feeding pattern, proving that the standard sampling window is statistically sufficient.
 
-![Validation Graph](results/inference_examples/Validation_graph.png)
+![Validation Graph](Docs/Validation_graph.png)
 *(Figure: The "W-Shape" Feeding Pattern detected by the Computer Vision system, aligned with the methane sampling window.)*
 
 ## 📜 Project Documentation
@@ -71,12 +71,12 @@ The model achieved high precision even in low-light conditions. As seen in the C
 
 | Confusion Matrix |
 | :---: |
-| ![Confusion Matrix](results/inference_examples/Conf.png) |
+| ![Confusion Matrix](Docs/conf.png) |
 
 ### 2. Visual Validation
 Below is a sample of the model tracking a cow's head correctly despite severe occlusion from the feed bin and tubing.
 
-![Inference Example](results/inference_examples/Animation3.gif)
+![Inference Example](Docs/Animation3.gif)
 
 ## 📝 License & Citation
 ⚠️ **Intellectual Property Notice**
@@ -86,4 +86,4 @@ This code was developed as part of a Master's Capstone project with **DEECA / Ag
 **Judy Thanh Uyen Nguyen**
 * **Institution:** DEECA / Agriculture Victoria Research & La Trobe University
 * **LinkedIn:** [Your LinkedIn Profile URL Here]
-* **Email:** [Your Email Address Here]
+* **Email:** [judy.n88@live.com.au]
