@@ -31,6 +31,7 @@ The project is structured into **12 modular scripts** that handle the full lifec
 | **A.9** | `extract_inference_frames.py` | **Data Ingestion:** Converts raw video footage into static image sequences to prepare for the auto-labeling pipeline. |
 | **A.10** | `generate_cvat_preannotations.py` | **Active Learning:** Uses the trained model to predict bounding boxes on new frames, creating pre-annotated text files for rapid correction in CVAT. |
 | **A.1** | `sync_frames.py` | **Data Synchronization:** Iterates through CVAT exports, matches them to raw video frames, and extracts high-res image-text pairs for YOLO/COCO formatting. |
+| **A.1b** |	generate_negative_labels.py |	**Negative Mining:** Automates the creation of empty annotation files for background-only images, training the model to ignore static infrastructure.
 
 ### Phase 2: Calibration & Training
 | ID | Script | Functionality |
@@ -62,7 +63,7 @@ The project successfully processed over **15,000 frames** of milking footage. Th
 ## 📜 Project Documentation
 * 📄 **[Slideshow Presentation (PDF)](Docs/Presentation_pdf.pdf)**
     * *A 15-slide visual summary of goals, methodology, and biological validation results.*
-* 📄 **[Full Technical Report (PDF)](Docs/FINAL_REPORT.pdf)**
+* 📄 **[Full Technical Report (PDF)](Docs/FINAL_REPORTv2.pdf)**
     * *A detailed report covering error analysis, "failure modes," and statistical validation.*
 
 ## 📈 Performance & Evaluation
